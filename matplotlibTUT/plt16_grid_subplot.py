@@ -28,6 +28,8 @@ ax4.set_xlabel('ax4_x')
 ax4.set_ylabel('ax4_y')
 ax5 = plt.subplot2grid((3, 3), (2, 1))
 
+plt.tight_layout()
+
 # method 2: gridspec
 #########################
 plt.figure()
@@ -41,6 +43,8 @@ ax9 = plt.subplot(gs[-1, 0])
 ax9.scatter([1, 2], [2, 2])
 ax10 = plt.subplot(gs[-1, -2])
 
+plt.tight_layout()
+
 # method 3: easy to define structure
 ####################################
 f, ((ax11, ax12), (ax13, ax14)) = plt.subplots(2, 2, sharex=True, sharey=True)
@@ -48,14 +52,17 @@ ax11.scatter([1,2], [1,2])
 
 # my examples
 plt.figure()
+# plt.subplots_adjust(hspace=0.001)
 gs = gridspec.GridSpec(10, 1)
+# gs.hspace = 0.001
+gs.set_height_ratios = 0.001
 # use index from 0
 ax12 = plt.subplot(gs[0:8, 0])
 ax12.plot([1, 2], [1, 2])
 ax12.set_xticks([])
 ax13 = plt.subplot(gs[9, 0])
 # todo: plot histograph or bars as subplots?
-ax13.hist(np.linspace(1, 10, 10), np.linspace(0,1,10))
+ax13.bar(np.linspace(1, 10, 10), np.linspace(0,1,10))
 
 
 plt.tight_layout()
