@@ -35,7 +35,7 @@ l2, = plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--', label='square 
 
 # plt.legend(loc='upper right')
 plt.legend(handles=[l1, l2], labels=['up', 'down'],  loc='best')
-# the "," is very important in here l1, = plt... and l2, = plt... for this step
+# the "," is very important in here l1, = plt... and l2, = plt... for this step to overwrite label strings 
 """legend( handles=(line1, line2, line3),
            labels=('label1', 'label2', 'label3'),
            'upper right')
