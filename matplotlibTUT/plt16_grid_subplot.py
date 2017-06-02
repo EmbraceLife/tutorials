@@ -13,7 +13,7 @@ http://matplotlib.org/users/gridspec.html
 
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
-
+import numpy as np
 # method 1: subplot2grid
 ##########################
 plt.figure()
@@ -34,15 +34,29 @@ plt.figure()
 gs = gridspec.GridSpec(3, 3)
 # use index from 0
 ax6 = plt.subplot(gs[0, :])
+ax6.plot([1, 2], [1, 2])
 ax7 = plt.subplot(gs[1, :2])
 ax8 = plt.subplot(gs[1:, 2])
 ax9 = plt.subplot(gs[-1, 0])
+ax9.scatter([1, 2], [2, 2])
 ax10 = plt.subplot(gs[-1, -2])
 
 # method 3: easy to define structure
 ####################################
 f, ((ax11, ax12), (ax13, ax14)) = plt.subplots(2, 2, sharex=True, sharey=True)
 ax11.scatter([1,2], [1,2])
+
+# my examples
+plt.figure()
+gs = gridspec.GridSpec(10, 1)
+# use index from 0
+ax12 = plt.subplot(gs[0:8, 0])
+ax12.plot([1, 2], [1, 2])
+ax12.set_xticks([])
+ax13 = plt.subplot(gs[9, 0])
+# todo: plot histograph or bars as subplots?
+ax13.hist(np.linspace(1, 10, 10), np.linspace(0,1,10))
+
 
 plt.tight_layout()
 plt.show()
