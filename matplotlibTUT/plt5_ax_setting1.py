@@ -1,16 +1,3 @@
-# View more python tutorials on my Youtube and Youku channel!!!
-
-# Youtube video tutorial: https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg
-# Youku video tutorial: http://i.youku.com/pythontutorial
-
-# 5 - axis setting
-"""
-Please note, this script is for python3+.
-If you are using python2+, please modify it accordingly.
-Tutorial reference:
-http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html
-"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -18,21 +5,28 @@ x = np.linspace(-3, 3, 50)
 y1 = 2*x + 1
 y2 = x**2
 
+# create a figure
 plt.figure()
+
+# plot 2 lines
 plt.plot(x, y2)
-# plot the second curve in this figure with certain parameters
 plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--')
-# set x limits
+
+# doc plt.xlim; current: plt.xlim()
 plt.xlim((-1, 2))
 plt.ylim((-2, 3))
+
+# set x, y axis label
 plt.xlabel('I am x')
 plt.ylabel('I am y')
 
-# set new sticks
+# set x, y ticks labels
 new_ticks = np.linspace(-1, 2, 5)
 print(new_ticks)
+# doc plt.xticks
 plt.xticks(new_ticks)
-# set tick labels
 plt.yticks([-2, -1.8, -1, 1.22, 3],
            [r'$really\ bad$', r'$bad$', r'$normal$', r'$good$', r'$really\ good$'])
+
+		   
 plt.show()

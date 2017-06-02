@@ -15,8 +15,10 @@ import matplotlib.pyplot as plt
 
 # example 1:
 ###############################
-plt.figure(figsize=(6, 4))
+plt.figure(figsize=(8, 4))
 # plt.subplot(n_rows, n_cols, plot_num)
+
+# start with the last plot, and push plot to the left, until the most top left plot
 plt.subplot(2, 2, 1)
 plt.plot([0, 1], [0, 1])
 
@@ -29,6 +31,7 @@ plt.plot([0, 1], [0, 3])
 plt.subplot(224)
 plt.plot([0, 1], [0, 4])
 
+# Automatically adjust subplot parameters to give specified padding.\
 plt.tight_layout()
 
 # example 2:
