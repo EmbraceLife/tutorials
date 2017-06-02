@@ -20,7 +20,7 @@ y2 = x**2
 
 plt.figure()
 plt.plot(x, y2)
-# plot the second curve in this figure with certain parameters
+
 plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--')
 # set x limits
 plt.xlim((-1, 2))
@@ -36,9 +36,13 @@ plt.yticks([-2, -1.8, -1, 1.22, 3],
 
 # gca = 'get current axis'
 ax = plt.gca()
+
+# dr ax.spines['right']; an object
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 
+# dr ax.xaxis; an Xaxis object
+# doc ax.xaxis.set_ticks_position
 ax.xaxis.set_ticks_position('bottom')
 # ACCEPTS: [ 'top' | 'bottom' | 'both' | 'default' | 'none' ]
 
