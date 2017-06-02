@@ -19,8 +19,10 @@ X = np.arange(n)
 Y1 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
 Y2 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
 
-plt.bar(X, +Y1, facecolor='#9999ff', edgecolor='white')
+plt.bar(X, +Y1, facecolor='#9999ff', edgecolor='blue')
 plt.bar(X, -Y2, facecolor='#ff9999', edgecolor='white')
+
+# in pdb add `plt.show()` to see plotting right here
 
 for x, y in zip(X, Y1):
     # ha: horizontal alignment
