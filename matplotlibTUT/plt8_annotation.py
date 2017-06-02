@@ -41,6 +41,7 @@ plt.plot([x0, x0,], [0, y0,], 'k--', linewidth=2.5)
 plt.scatter([x0, ], [y0, ], s=50, color='b')
 
 # method 1:
+# https://youtu.be/p7FoQqWk_Uo?list=PLXO45tsB95cKiBRXYqNNCw8AUo6tYen3l&t=564
 #####################
 plt.annotate(r'$2x+1=%s$' % y0, xy=(x0, y0), xycoords='data', xytext=(+30, -30),
              textcoords='offset points', fontsize=16,
