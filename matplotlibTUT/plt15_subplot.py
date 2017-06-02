@@ -55,5 +55,6 @@ plt.subplot(236)
 plt.plot([0, 1], [0, 4])
 
 
+# get each subplot aligned close to each other nicely
 plt.tight_layout()
 plt.show()
