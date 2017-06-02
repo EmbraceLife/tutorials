@@ -35,6 +35,8 @@ ax.spines['left'].set_position(('data', 0))
 
 x0 = 1
 y0 = 2*x0 + 1
+
+# plot a -- between two points
 plt.plot([x0, x0,], [0, y0,], 'k--', linewidth=2.5)
 plt.scatter([x0, ], [y0, ], s=50, color='b')
 
